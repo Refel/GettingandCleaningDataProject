@@ -8,11 +8,12 @@ msub <- function(pattern, replacement, x, ...) {
 }
 
 # Definition of directories and files
-PathBase ="."
-PathTrain= paste(PathBase,"train",sep="/")
-PathTest= paste(PathBase,"test",sep="/")
-MeanFile = paste(PathBase,"Join.txt",sep="/")
-setwd(PathBase)
+PathBase <-"."
+PathTrain<-PathBase
+PathTest<-PathBase
+#PathTrain<- paste(PathBase,"train",sep="/")
+#PathTest<- paste(PathBase,"test",sep="/")
+MeanFile <- paste(PathBase,"Join.txt",sep="/")
 
 # Read the names of the diferent functions
 # Search those with that calculates the mean and std
