@@ -10,11 +10,8 @@ GettingandCleaningDataProject
 The information of the file is 
 
 "1"  "Subject"
-
 "2"  "Activity"
-
 "3"  "Time body accelerometer mean value X"
-
 "4"  "Time body accelerometer mean value Y"
 
 "5"  "Time body accelerometer mean value Z"
