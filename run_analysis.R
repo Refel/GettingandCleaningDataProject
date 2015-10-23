@@ -1,3 +1,4 @@
+# This function changes multiple strings
 msub <- function(pattern, replacement, x, ...) {
         result <- x
         for (i in 1:length(pattern)) {
@@ -6,7 +7,7 @@ msub <- function(pattern, replacement, x, ...) {
         result
 }
 
-
+# Definition of directories and files
 PathBase ="."
 PathTrain= paste(PathBase,"train",sep="/")
 PathTest= paste(PathBase,"test",sep="/")
@@ -30,14 +31,14 @@ Xnames[,3]<-msub(From, To, Xnames[,3])
 train<-read.table(paste(PathTrain,"X_train.txt",sep="/"))
 train<-train[,Xnames[,1]]       #Filter the columns with  Xnames
 colnames(train)<-Xnames[,3]
+
 Strain<-read.table(paste(PathTrain,"subject_train.txt",sep="/"))
 colnames(Strain)<- "Subject"
+
 Ytrain<-read.table(paste(PathTrain,"y_train.txt",sep="/"))
 colnames(Ytrain)<- "Activity"
-train<- cbind(Strain,Ytrain,train)
-# train<- cbind("Train",Strain,Ytrain,train)
-# colnames(train)[1]<-"Test or Training"
 
+train<- cbind(Strain,Ytrain,train)
 
 #Read and join all test data
 #Stest contains the subjetdata
@@ -45,24 +46,26 @@ train<- cbind(Strain,Ytrain,train)
 test<-read.table(paste(PathTest,"X_test.txt",sep="/"))
 test<-test[,Xnames[,1]]       #Filter the columns with  Xnames
 colnames(test)<-Xnames[,3]
+
 Stest<-read.table(paste(PathTest,"subject_test.txt",sep="/"))
 colnames(Stest)<- "Subject"
+
 Ytest<-read.table(paste(PathTest,"y_test.txt",sep="/"))
 colnames(Ytest)<- "Activity"
 
 test<- cbind(Stest,Ytest,test)
-# test<- cbind("Test",Stest,Ytest,test)
-# colnames(test)[1]<-"Test or Training"
 
-
+# Mergin the both test and train data sets
 JoinData<-rbind(test,train)
 
+# Calcualte the mean filtering by Subject and Activity
 library(plyr)
 MeanData <- aggregate(. ~ Subject + Activity, data=JoinData, FUN = mean)
 
 #load activity names
 activity_labels <- read.table(paste(PathBase,"activity_labels.txt",sep="/"))
 
+# Changing form numbers to names for Activity
 MeanData$Activity <- factor(MeanData$Activity, labels=activity_labels[,2])
 
 write.table(MeanData,MeanFile,sep = "  ",col.names = FALSE)
