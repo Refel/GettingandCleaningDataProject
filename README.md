@@ -1,17 +1,35 @@
-# GettingandCleaningDataProject
-GettingandCleaningDataProject
-
 
 # How the script works and the
+The script reads two sets of data:
+######First the test set formed by three files
+  X_test.txt, y_text.txt, subject_test.txt,
+######Second the training set formed also by three files
+  X_train, y_train, subject_train
+  
+Gets the names of the column data from the file features.txt
 
+Merges all the information of all this files and filter the columns that have inforatión of mean and standar deviation
+changes the names to a more descriptive ones to descrive the data set
 
+Calculates the mean of all the the measures filtering each "Subjet" and each "Activity", and writes the resutl in a file called means.txt
+
+In the file ColNames.txt there is the name of the data set
 
 # Code book describing the variables
-The information of the file is 
+
+All the data in the from columns 3 is calutated as the mean of each variable grouping by Subject and Activity
+Subjetc is a number representing on of the 30 volunters
+
+- The original data comes from the UCI machine lerning and intelligent System
+- http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+- Aditional information can be found in Readme.txt, features_info.txt, features.txt, and activity_labels
 
 "1"  "Subject"
+
 "2"  "Activity"
+
 "3"  "Time body accelerometer mean value X"
+
 "4"  "Time body accelerometer mean value Y"
 
 "5"  "Time body accelerometer mean value Z"
