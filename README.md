@@ -28,8 +28,8 @@ Calculates the mean of all the measures, grouping by each **Subjet** and each **
 
 Column | Variable    |  Range
 -------|-------------|----------|----------
-1| Subject (Volunteer that perform the activity)|[1,30] Integer values representing a person.
-2|Activity|String describint the activity
+1| Subject (Volunteer that performs the activity)|[1,30] Integer values representing a person.
+2|Activity|String describing the activity
 3|Time body accelerometer mean value X|[-1.0,1.0] . Normalized floating point values
 4|Time body accelerometer mean value Y|[-1.0,1.0] . Normalized floating point values
 5|Time body accelerometer mean value Z|[-1.0,1.0] . Normalized floating point values
