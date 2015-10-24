@@ -1,40 +1,34 @@
-# How the script works
+# # Code book describing the variables and how the script works
 The script reads two sets of data:  
-*First the test set formed by the files*  
+*First the "test set" formed by the files*  
 
  - X_test.txt  
  - y_text.txt  
  - subject_test.txt  
   
-*Second the training set formed by the files*  
+*Second the "training set" formed by the files*  
 
   - X_train.txt  
   - y_train.txt  
   - subject_train.txt  
     
-Gets the names of the column data from the file features.txt
+The script gets the names of the column data from the file features.txt
 
-Merges all the information of all this files and filter the columns that have inforatión of mean and standar deviation
-changes the names to a more descriptive ones to descrive the data set
+Merges all the information of all those files and filter the columns that have inforatión of mean and standard deviation
+changes the names to a more descriptive one to describe the data set
 
-Calculates the mean of all the the measures filtering each **Subjet** and each **Activity**, and writes the resutl in a file called **means.txt**
-
-In the file **ColNames.txt** the name of the columns of the data set is stored.
-
-# Code book describing the variables
+Calculates the mean of all the measures, grouping by each **Subjet** and each **Activity**. It writes the result in a file called **means.txt**. And it generates the file **ColNames.txt** the name of the columns of the data set is stored.
 
 
-Subjetc is a number representing on of the 30 volunters
-
-- The original data comes from the UCI machine lerning and intelligent System
+- The original data comes from the UCI machine learning and intelligent System
 - http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-- Aditional information can be found in Readme.txt, features_info.txt, features.txt, and activity_labels.txt
+- Additional information can be found in Readme.txt, features_info.txt, features.txt, and activity_labels.txt
 
 **All the data from columns 3 to 68 represents the average of each variable for each activity and each subject**
 
 Column | Variable    |  Range
 -------|-------------|----------|----------
-1| Subject (Voluntair that perform the activity|[1,30] Integer values representing a person.
+1| Subject (Volunteer that perform the activity)|[1,30] Integer values representing a person.
 2|Activity|String describint the activity
 3|Time body accelerometer mean value X|[-1.0,1.0] . Normalized floating point values
 4|Time body accelerometer mean value Y|[-1.0,1.0] . Normalized floating point values
