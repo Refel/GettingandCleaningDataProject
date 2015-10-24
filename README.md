@@ -1,4 +1,4 @@
-# # Code book describing the variables and how the script works
+# # How the script works and Code book describing the variables 
 The script reads two sets of data:  
 *First the "test set" formed by the files*  
 
