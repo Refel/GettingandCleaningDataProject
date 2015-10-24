@@ -19,7 +19,7 @@ changes the names to a more descriptive ones to descrive the data set
 
 Calculates the mean of all the the measures filtering each **Subjet** and each **Activity**, and writes the resutl in a file called **means.txt**
 
-In the file ColNames.txt the name of the columns of the data set is stored.
+In the file **ColNames.txt** the name of the columns of the data set is stored.
 
 # Code book describing the variables
 
@@ -28,7 +28,7 @@ Subjetc is a number representing on of the 30 volunters
 
 - The original data comes from the UCI machine lerning and intelligent System
 - http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-- Aditional information can be found in Readme.txt, features_info.txt, features.txt, and activity_labels
+- Aditional information can be found in Readme.txt, features_info.txt, features.txt, and activity_labels.txt
 
 **All the data from columns 3 to 68 represents the average of each variable for each activity and each subject**
 
