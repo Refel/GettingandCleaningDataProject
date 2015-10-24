@@ -1,4 +1,4 @@
-# How the script works and the
+# How the script works
 The script reads two sets of data:  
 *First the test set formed by the files*  
 
